@@ -49,10 +49,16 @@ h1 {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-#trex {
-  position: absolute;
+#image {
+  /* position: absolute;
   top: 10%;
-  left: -100%;
+  left: -100%; */
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-250%, -50%);
 }
 
 .slide-in {
@@ -64,10 +70,10 @@ h1 {
 }
 
 @keyframes slide-in {
-  100% { transform: translateX(250%); }
+  100% { transform: translate(-50%, -50%); }
 }
   
 @keyframes slide-out {
-  0% { transform: translateX(250%); }
-  100% { transform: translateX(0%); }
+  0% { transform: translateX(-50%, -50%); }
+  100% { transform: translateX(-250%,-50%); }
 }

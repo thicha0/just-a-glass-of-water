@@ -6,11 +6,11 @@ let count = 0;
 let content = document.getElementById('content');
 let text = document.getElementById('text');
 let glass = document.getElementById('glass');
-let trex = document.getElementById('trex');
+let image = document.getElementById('image');
 
 // Audio
-let footstep = document.getElementById('footstep');
-let roar = document.getElementById('roar');
+let sound1 = document.getElementById('sound1');
+let sound2 = document.getElementById('sound2');
 
 
 // Events
@@ -33,12 +33,12 @@ glass.addEventListener('click', function() {
 
     if (count === 3) {
       glass.style.opacity = '0';
-      roar.play();
-      trex.classList.remove('slide-out');
-      trex.classList.add('slide-in');
+      sound2.play();
+      image.classList.remove('slide-out');
+      image.classList.add('slide-in');
       setTimeout(() => {
-        trex.classList.remove('slide-in');
-        trex.classList.add('slide-out');
+        image.classList.remove('slide-in');
+        image.classList.add('slide-out');
         count = 0;
         glass.style.opacity = '1';
         text.innerHTML = 'Oh, a glass of water...';
@@ -53,7 +53,7 @@ glass.addEventListener('click', function() {
       if (count === 2) {
         newText = '...';
       }
-      footstep.play();
+      sound1.play();
       content.classList.add('shake');
       setTimeout(() => {
         content.classList.remove('shake');
